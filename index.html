@@ -1,0 +1,2921 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pix do Milhão</title>
+    <link href="css/novo.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+
+<body>
+    
+     <script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  async
+  defer
+></script>
+    
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '8042303849114359');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=8042303849114359&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1843624242775652');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1843624242775652&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+    <script>
+        window.onload = function() {
+  mudarCapa();
+}
+    </script>
+
+    <div class="topo d-flex justify-content-between align-items-center">
+        <div class="logos d-flex justify-content-center align-items-center">
+            <img class="logo-1" src="images/logo-1.svg" alt="">
+            <div class="line-logos"></div>
+            <img class="logo-2" src="images/logo-2.svg" alt="">
+        </div>
+        <i class="bi bi-list"></i>
+    </div>
+
+
+    <div class="container-main-banner">
+        <div class="card-main-banner">
+            <div class="banner">
+                <img id="mudarCapa" src="" alt="">
+
+                <style>
+                    .countdown {
+                        overflow: hidden;
+                        margin-top: 10px;
+                        border-radius: 0.5rem;
+                        padding: 1rem 0rem;
+                        background-color: #0f0f0f;
+                        color: white;
+                    }
+
+                    .countdown h1 {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+
+                    .countdown-icon img {
+                        width: 5rem;
+                        margin: 0rem 1rem;
+                        filter: drop-shadow(0px 0px 28px #eabe3b);
+                    }
+
+                    .countdown-icon h1 {
+                        color: #eabe3b;
+                        position: absolute;
+                        font-size: 2.5rem;
+                        margin-top: 0.8rem;
+                    }
+
+                    @media (max-width: 575.98px) {
+                        .countdown {
+                            margin-top: 0px;
+                            padding: 0.5rem 0rem;
+                            margin: 0.4rem 0.5rem 0rem 0.5rem;
+                        }
+
+                        .countdown h1 {
+                            font-size: 4vw;
+                        }
+
+                        .countdown-icon img {
+                            width: 12vw;
+                            margin: 0rem 0rem;
+                        }
+
+                        .countdown-icon h1 {
+                            color: #eabe3b;
+                            position: absolute;
+                            font-size: 6vw;
+                            margin-top: 0.6rem;
+                        }
+                    }
+                    
+                     .hidden{
+                        display: none !important;
+                    }
+                </style>
+
+
+                <div class="countdown d-flex justify-content-center align-items-center" id="TimerData">
+                    <h1>Faltam</h1>
+                    <div class="countdown-icon d-flex justify-content-center align-items-center">
+                        <img src="../images/countdown.svg" alt="">
+                        <h1 id="days"></h1>
+                    </div>
+                    <h1>dias para o sorteio!</h1>
+                </div>
+                <div class="flex flex-row w-full gap-4 p-4 items-center justify-center rounded-lg bg-theme-gray-950 shadow-brand" id="TimerHora" style="width: 95%; margin: 2% auto 0 auto;"><div class="flex flex-col md:flex-row gap-2 md:gap-6 items-center justify-center text-white"><span class="font-semibold text-[16px] md:text-[20px] leading-[25px] md:leading-[30px]">Faltam</span><div class="flex flex-row gap-2 items-center transition-all duration-300"><div class="flex flex-col gap-[6px] md:gap-2 items-center justify-center transition-all duration-300"><div class="flex items-center justify-center w-[40px] md:w-[50px] h-[40px] md:h-[50px] text-theme-gray-950 text-[20px] md:text-[24px] leading-[20px] md:leading-[24px] font-semibold tracking-wide text-center rounded-full bg-gradient-to-b from-[#FFCB33] via-[#e6b72c] to-[#caa126] animate-pulseShadow" id="Horas">19</div><span class="text-theme-brand-primary-normal text-[10px] md:text-[11px] leading-[13px]">Horas</span></div><span class="text-theme-brand-primary-normal text-[32px] leading-[38px] tracking-wide pb-5">:</span><div class="flex flex-col gap-[6px] md:gap-2 items-center justify-center transition-all duration-300"><div class="flex items-center justify-center w-[40px] md:w-[50px] h-[40px] md:h-[50px] text-theme-gray-950 text-[20px] md:text-[24px] leading-[20px] md:leading-[24px] font-semibold tracking-wide text-center rounded-full bg-gradient-to-b from-[#FFCB33] via-[#e6b72c] to-[#caa126] animate-pulseShadow " id="Minutos">56</div><span class="text-theme-brand-primary-normal text-[10px] md:text-[11px] leading-[13px]">Minutos</span></div><span class="text-theme-brand-primary-normal text-[32px] leading-[38px] tracking-wide pb-5">:</span><div class="flex flex-col gap-[6px] md:gap-2 items-center justify-center transition-all duration-300"><div class="flex items-center justify-center w-[40px] md:w-[50px] h-[40px] md:h-[50px] text-theme-gray-950 text-[20px] md:text-[24px] leading-[20px] md:leading-[24px] font-semibold tracking-wide text-center rounded-full bg-gradient-to-b from-[#FFCB33] via-[#e6b72c] to-[#caa126] animate-pulseShadow " id="Segundos">22</div><span class="text-theme-brand-primary-normal text-[10px] md:text-[11px] leading-[13px]">Segundos</span></div></div><span class="font-semibold text-[18px] md:text-[20px] leading-[25px] md:leading-[30px]">para o sorteio!</span></div></div>
+                <link rel="stylesheet" href="/css/74623e6da53cff98.css">
+                <script src="/MudarInfos.js"></script>
+                <h1>14ª EDIÇÃO - R$ 1 MILHÃO, CONQUISTE A SUA INDEPENDÊNCIA FINANCEIRA!
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="container-main ">
+        <div class="card-main">
+            <div class="valor-bilhete d-flex w-100 justify-content-center align-items-center">
+                <i class="bi bi-ticket-perforated"></i> <h1>Por apenas <span>R$ 3,99</span></h1>
+            </div>
+            <div class="promocao d-flex flex-column justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center">
+                    <i class="bi bi-fire"></i> <h1>Promoção</h1>
+                </div>
+                <div class="promocao-destaque d-flex justify-content-center align-items-cente">
+                    <h1>a partir de 5 bilhetes, <span>R$ 1,99</span> cada</h1>
+                </div>
+            </div>
+        </div>
+    </div>  
+    -->
+
+    <div class="container-main">
+        <div class="card-main cotas">
+            <div class="">
+                <h1>Quanto mais produtos comprar, maiores são as suas chances de ganhar!</h1>
+
+                <div class="cotas-one">
+
+                    <button type="button" class="cota" onclick="selecionarValor(10)">
+                        <div class="destaque">R$19,90</div>
+                        <div class="cota-qtd">
+                            +10
+                        </div>
+
+                        <h2>SELECIONAR</h2>
+                    </button>
+
+                    <button type="button" class="cota" onclick="selecionarValor(20)">
+                        <div class="destaque">R$39,80</div>
+                        <div class="cota-qtd">
+                            +20
+                        </div>
+
+                        <h2>SELECIONAR</h2>
+                    </button>
+
+                    <button type="button" class="cota" onclick="selecionarValor(30)">
+                        <div class="destaque">R$59,70</div>
+                        <div class="cota-qtd">
+                            +30
+                        </div>
+                        <h2>SELECIONAR</h2>
+                    </button>
+
+                </div>
+
+                <div style="margin: 0.3em 0em;"></div>
+
+                <div class="cotas-one">
+
+                    <button type="button" class="cota" onclick="selecionarValor(50)">
+                        <div class="destaque">R$99,50</div>
+                        <div class="cota-qtd">
+                            +50
+                        </div>
+                        <h2>SELECIONAR</h2>
+                    </button>
+
+                    <button type="button" class="cota" onclick="selecionarValor(100)">
+                        <div class="destaque">R$199,00</div>
+                        <div class="cota-qtd">
+                            +100
+                        </div>
+                        <h2>SELECIONAR</h2>
+                    </button>
+
+                    <button type="button" class="cota" onclick="selecionarValor(200)">
+                        <div class="destaque">R$398,90</div>
+                        <div class="cota-qtd">
+                            +200
+                        </div>
+                        <h2>SELECIONAR</h2>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="contador-cotas">
+                <span>
+                    <button type="button" class="btn-contador-cotas" onclick="decrementar()">-</button>
+                </span>
+                <input type="number" id="numero" class="input-contador-cotas" value="0" min="0" oninput="highlightButton()">
+                <span>
+                    <button type="button" class="btn-contador-cotas" onclick="incrementar()">+</button>
+                </span>
+            </div>
+        </div>
+
+        <button type="button" id="btn-adicionar-carrinho" class="adc-carrinho" onclick="adicionarAoCarrinho()" disabled="">
+            <i class="bi bi-ticket-perforated"></i> PARTICIPAR
+        </button>
+    </div>
+
+
+    <div class="container-main">
+        <div class="card-main">
+            <div class="infos">
+                <p>
+                    PRÊMIOS DIÁRIOS NOS GRUPOS 👇<br>
+
+                    <a href="https://devzapp.com.br/api-engennier/campanha/api/redirect/650ce185712fb80001e2d049">GRUPO
+                        VIP DO WHATSAPP</a> 👈 PARTICIPE<br>
+
+                    <a href="https://ig.me/j/Aba0sn35ZvBG6J6W/">CANAL INSTAGRAM 👈</a> PARTICIPE<br><br>
+
+
+                    VEJA QUEM GANHOU OS R$ 1.000.000,00 DA AÇÃO DO DIA 30/08/2024, <a href="https://www.instagram.com/reel/C_UHyAcN8ya/?igsh=bG9xenJ0ZWFvOW9z">CLIQUE AQUI 👈</a><br><br>
+
+
+                    ASSISTA A LIVE DO SORTEIO DE R$ 1.000.000,00 DA AÇÃO 30/08/2024 <a href="https://www.instagram.com/reel/C_UEdXhNBh-/?igsh=MTFjOXdieTZ1d21kZw%3D%3D">CLIQUE AQUI 👈</a><br><br>
+
+                    Nome do sorteio: R$ 1 MILHÃO, SEJA O PRÓXIMO MILIONÁRIO! + EBOOK VIRADA DIGITAL<br><br>
+
+
+                    PRÊMIOS EXTRAS:<br>
+
+                    SÃO 1000 BILHETES PREMIADOS VALENDO ATÉ R$ 20.000,00!<br>
+
+                    <i>(Ao fazer sua compra, se vier um bilhete premiado, já será notificado no ato da compra e seu nome
+                        já aparecerá em nosso site, confira e nos acione para recebimento do prêmio.)<br><br>
+
+                        Criative e Pix do Milhão trazendo cultura: Temos ebooks dos mais variados assuntos. Garanta os
+                        seus e concorra a muitos prêmios.<br><br></i>
+
+                    O sorteio será sexta, dia 06/09/2024, às 20 horas, ao vivo, no Instagram <a href="https://www.instagram.com/pixdomilhaooficial">@pixdomilhaooficial</a><br>
+
+                    Nosso único whatsapp de suporte é : <a href="https://wa.me/5583999159351">83 99915-9351</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-main">
+        <div class="bilhetes-premiados">
+            <div class="bilhetes-premiados-icon d-flex align-items-center">
+                <span><i class="bi bi-ticket-perforated"></i></span>
+                <h1>Bilhetes premiados</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-main">
+        <div class="card-main">
+            <div class="bilhetes">
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 20.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            7137167
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 15.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            2558247
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 10.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            2959995
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 10.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            2192110
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 10.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            3628634
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 10.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            5816756
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 10.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            9606914
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 10.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            8196614
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMPRADO -->
+                <div class="bilhetes-one">
+                    <h1>R$ 10.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            3211688
+                        </div>
+                        <div class="bilhetes-one-span-cor bilhetes-amarelo d-flex justify-content-center">
+                            • Comprado
+                        </div>
+                    </div>
+                    <div class="bilhets-one-user d-flex">
+                        <i class="bi bi-person"></i> Aline valentino da silva
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 5.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            0155205
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 5.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            1513089
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 5.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            6261522
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 5.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            7345713
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 5.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            9684250
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 5.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            7655904
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 5.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            4248241
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BILHETE -->
+                <div class="bilhetes-one">
+                    <h1>R$ 5.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            5785984
+                        </div>
+                        <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                            • Disponível
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMPRADO -->
+                <div class="bilhetes-one">
+                    <h1>R$ 5.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            5305150
+                        </div>
+                        <div class="bilhetes-one-span-cor bilhetes-amarelo d-flex justify-content-center">
+                            • Comprado
+                        </div>
+                    </div>
+                    <div class="bilhets-one-user d-flex">
+                        <i class="bi bi-person"></i> Adriana socorro Domingos
+                    </div>
+                </div>
+
+                <!-- COMPRADO -->
+                <div class="bilhetes-one">
+                    <h1>R$ 5.000,00</h1>
+                    <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                        <div class="bilhetes-one-span-ticket">
+                            <i class="bi bi-ticket-perforated"></i>
+                            1574376
+                        </div>
+                        <div class="bilhetes-one-span-cor bilhetes-amarelo d-flex justify-content-center">
+                            • Comprado
+                        </div>
+                    </div>
+                    <div class="bilhets-one-user d-flex">
+                        <i class="bi bi-person"></i> Karoline de jesus freire
+                    </div>
+                </div>
+
+                <!-- GERAR BILHETES -->
+                <div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7706477
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1012144
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1972793
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6734773
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4698596
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9217869
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4117092
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3112070
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4841384
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2288578
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6682117
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1417169
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6645376
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9682703
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6336504
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8105289
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3655204
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8388388
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3978443
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9443773
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9144725
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1250601
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5636813
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4819629
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5959582
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7128544
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6864614
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5556145
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2818983
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8696417
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8638532
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4367274
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8572278
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3397062
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4139581
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6918556
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9336086
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8715888
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8666070
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 2.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6962962
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2863505
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9856883
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9037176
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9521110
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7648653
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2334888
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1396130
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7986382
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2294712
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7270581
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2645768
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7771365
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9157591
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6549511
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5324649
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5630544
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6247019
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7944394
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7859886
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7713009
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5266571
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3064259
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7787726
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9137241
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6918812
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8808678
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2306282
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9566053
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6679549
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8768066
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5041581
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9260227
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2992047
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3722841
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9307292
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5014598
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3041319
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7917057
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4958837
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 1.000,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2604147
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8254669
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6258524
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1570374
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1187997
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1637082
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3302703
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6853817
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7461746
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7519440
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3456187
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8728450
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5610185
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9062821
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4243294
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7213249
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8849052
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4837842
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1013710
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3740303
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8077568
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7286488
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1943797
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2584753
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3792268
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9729980
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5924161
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8127161
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5108541
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5330640
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8021583
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9076398
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5537279
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4683706
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7709966
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1665996
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2035006
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2665571
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6536526
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9948421
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 500,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2883966
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7258555
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8896719
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3740156
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8892680
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5520720
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5179126
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4131225
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7891059
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1756563
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7212883
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5517365
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5005116
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6026910
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1615481
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8515806
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1141567
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3384224
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5262636
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2231452
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4065287
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5869225
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4588335
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3810961
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6421693
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6942622
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2739613
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2825100
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2613261
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4661098
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6855992
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5266882
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2830225
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1585756
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6831347
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9454112
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1225080
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5263573
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3175129
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6845545
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 250,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7492926
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6883656
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3770173
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3165677
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5825504
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3887669
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1123113
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8442843
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8664245
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6155805
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4411753
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8494504
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3431883
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4521506
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1070064
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3288499
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    2042438
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8053425
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9766162
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9355382
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6491592
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4331734
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7001438
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9210880
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6290882
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3402042
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9799665
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8300391
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    9691097
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8401058
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    7874996
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5635548
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    8551344
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4774000
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1766580
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5094714
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    6700997
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    3474287
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    5199611
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    1556159
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div><div class="bilhetes-one">
+                            <h1>R$ 100,00</h1>
+                            <div class="bilhetes-one-span d-flex justify-content-between align-items-center">
+                                <div class="bilhetes-one-span-ticket">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    4238042
+                                </div>
+                                <div class="bilhetes-one-span-cor d-flex justify-content-center">
+                                    • Disponível
+                                </div>
+                            </div>
+                        </div>                <!-- /GERAR BILHETES -->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="rodape text-center">
+        <div class="w-100 d-flex justify-content-center align-items-center">
+            <img class="button-rodape" style="margin-right: 20px;" src="images/suporte.png" alt="">
+            <img class="button-rodape" src="images/instagram.png" alt="">
+        </div>
+        <p>
+            CNPJ Criative Prêmios 30.682.309/0001-70 © 2023 - Todos os sorteios da Criative Prêmios são regulamentados e
+            fiscalizados pela LOTEP - AUTORIZAÇÃO LTP-PRC- 00014/2024
+        </p>
+        <img class="logo-rodape" src="images/logo-1.svg" alt="">
+    </div>
+
+
+    <!-- BOTÃO + E - -->
+    <script>
+        const precoPorUnidade = 0.99;
+
+        function incrementar() {
+            var input = document.getElementById('numero');
+            var valorAtual = parseInt(input.value);
+            if (valorAtual < 200) {
+                if (valorAtual === 0) {
+                    input.value = 10;
+                } else if (valorAtual === 10) {
+                    input.value = 20;
+                } else if (valorAtual === 20) {
+                    input.value = 30;
+                } else if (valorAtual === 30) {
+                    input.value = 50;
+                } else if (valorAtual === 50) {
+                    input.value = 100;
+                } else if (valorAtual === 100) {
+                    input.value = 200;
+                }
+            }
+            highlightButton();
+        }
+
+        function decrementar() {
+            var input = document.getElementById('numero');
+            var valorAtual = parseInt(input.value);
+            if (valorAtual > 10) {
+                if (valorAtual === 200) {
+                    input.value = 100;
+                } else if (valorAtual === 100) {
+                    input.value = 50;
+                } else if (valorAtual === 50) {
+                    input.value = 30;
+                } else if (valorAtual === 30) {
+                    input.value = 20;
+                } else if (valorAtual === 20) {
+                    input.value = 10;
+                }
+            }
+            highlightButton();
+        }
+
+        function highlightButton() {
+            var input = document.getElementById('numero');
+            var valorAtual = parseInt(input.value);
+            var botoesCotas = document.querySelectorAll('.cota');
+            var botaoAdicionarCarrinho = document.getElementById('btn-adicionar-carrinho');
+            var valorTotal = document.getElementById('valor-total');
+            var link;
+
+            botoesCotas.forEach(function (botao) {
+                botao.classList.remove('cota-selected');
+                var valorBotao = parseInt(botao.querySelector('.cota-qtd').innerText.trim());
+                if (valorBotao === valorAtual) {
+                    botao.classList.add('cota-selected');
+                    switch (valorBotao) {
+                        case 10:
+                            link = "https://app.payspectra.com/checkout/fcede69d-f80e-4890-81f7-8de8ea1e28a8";
+                            break;
+                        case 20:
+                            link = "https://app.payspectra.com/checkout/ad993991-406a-466f-9ae5-061aa8740e73";
+                            break;
+                        case 30:
+                            link = "https://app.payspectra.com/checkout/852d6f44-7e6d-4eda-b108-ba31ddb727ab";
+                            break;
+                        case 50:
+                            link = "https://app.payspectra.com/checkout/12b56cbb-b39f-4a51-a9a2-c1ad49351516";
+                            break;
+                        case 100:
+                            link = "https://app.payspectra.com/checkout/2c1cba2c-0a3b-4bad-aea3-2eaff7716628";
+                            break;
+                        case 200:
+                            link = "https://app.payspectra.com/checkout/f4e5bd81-1cca-4c9b-9605-8998a461b29b";
+                            break;
+                        default:
+                            break;
+                    }
+                    botaoAdicionarCarrinho.setAttribute('onclick', 'adicionarAoCarrinho("' + link + '")');
+                }
+            });
+
+            if (valorAtual === 0) {
+                botaoAdicionarCarrinho.disabled = true;
+                valorTotal.innerText = "R$ 0,00";
+            } else {
+                botaoAdicionarCarrinho.disabled = false;
+                valorTotal.innerText = "R$ " + (valorAtual * precoPorUnidade).toFixed(2).replace('.', ',');
+            }
+        }
+
+        function selecionarValor(valor) {
+            var input = document.getElementById('numero');
+            input.value = valor;
+            highlightButton();
+        }
+
+        function adicionarAoCarrinho(link) {
+            window.location.href = link + window.location.search;
+        }
+
+        document.getElementById('numero').addEventListener('input', function () {
+            this.value = this.value.replace(/[^0-9]/g, ''); // Apenas números permitidos
+            var valor = parseInt(this.value);
+            if (valor > 500) {
+                this.value = 500;
+            } else if (valor < 10) {
+                this.value = 0;
+            } else if (valor % 10 !== 0) {
+                this.value = Math.floor(valor / 10) * 10;
+            }
+            highlightButton();
+        });
+
+    </script>
+
+    <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+
+
+</body></html>
